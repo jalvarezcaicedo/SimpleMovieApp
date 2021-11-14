@@ -76,12 +76,12 @@ class AppModule {
 
 
     @Provides
-    fun provideCharacterService(retrofit: Retrofit): CatalogueService =
+    fun provideCatalogueService(retrofit: Retrofit): CatalogueService =
         retrofit.create(CatalogueService::class.java)
 
     @Singleton
     @Provides
-    fun provideCharacterRemoteDataSource(catalogueService: CatalogueService) =
+    fun provideCatalogueRemoteDataSource(catalogueService: CatalogueService) =
         CatalogueRemoteDataSource(catalogueService)
 
     @Singleton
