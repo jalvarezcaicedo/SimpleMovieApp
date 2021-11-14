@@ -2,6 +2,7 @@ package com.tech.simplemovieapp.feature.base
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.commit
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupWithNavController
@@ -18,6 +19,13 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         val bottomNavigation = binding.bottomNavigation
+
+        supportFragmentManager.commit {
+            setCustomAnimations(
+                R.anim.slide_in,
+                R.anim.fade_out
+            )
+        }
 
         val navHostFragment: NavHostFragment =
             supportFragmentManager.findFragmentById(R.id.navHostFragment) as NavHostFragment

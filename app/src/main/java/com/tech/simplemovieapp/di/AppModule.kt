@@ -2,6 +2,7 @@ package com.tech.simplemovieapp.di
 
 import android.content.Context
 import com.squareup.moshi.Moshi
+import com.tech.simplemovieapp.BuildConfig
 import com.tech.simplemovieapp.data.local.AppDataBase
 import com.tech.simplemovieapp.data.local.FilmDao
 import com.tech.simplemovieapp.data.remote.CatalogueRemoteDataSource
@@ -28,7 +29,7 @@ class AppModule {
     @Provides
     @Named("base_url")
     fun providesBaseUrl(): String {
-        return "https://run.mocky.io/v3/"
+        return BuildConfig.CATALOGUE_BASE_URL
     }
 
     @Singleton
