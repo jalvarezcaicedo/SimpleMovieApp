@@ -41,12 +41,13 @@ class MoviesFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        setupObserver()
         setupRecyclerView()
+        setupObserver()
     }
 
 
     private fun setupObserver() {
+        viewModel.start()
         viewModel.movies.observe(viewLifecycleOwner, {
             when (it.status) {
                 Resource.Status.SUCCESS -> {

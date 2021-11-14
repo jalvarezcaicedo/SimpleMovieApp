@@ -32,12 +32,13 @@ class SeriesFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        setupObserver()
         setupRecyclerView()
+        setupObserver()
     }
 
 
     private fun setupObserver() {
+        viewModel.start()
         viewModel.series.observe(viewLifecycleOwner, {
             when (it.status) {
                 Resource.Status.SUCCESS -> {
