@@ -46,7 +46,7 @@ class FilmViewHolder(
                     setImageDrawable(
                         ContextCompat.getDrawable(
                             context,
-                            R.drawable.ic_baseline_local_movies_24
+                            R.drawable.ic_baseline_movie_24
                         )
                     )
                 }
@@ -54,7 +54,7 @@ class FilmViewHolder(
                     setImageDrawable(
                         ContextCompat.getDrawable(
                             context,
-                            R.drawable.ic_baseline_tv_24
+                            R.drawable.ic_baseline_live_tv_24
                         )
                     )
                 }

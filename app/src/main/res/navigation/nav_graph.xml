@@ -8,6 +8,19 @@
     <fragment
         android:id="@+id/landingFragment"
         android:name="com.tech.simplemovieapp.feature.landing.LandingFragment"
-        android:label="fragment_landing"
+        android:label="All - Movies and Series"
         tools:layout="@layout/fragment_landing" />
+
+    <fragment
+        android:id="@+id/moviesFragment"
+        android:name="com.tech.simplemovieapp.feature.movies.MoviesFragment"
+        android:label="Movies"
+        tools:layout="@layout/fragment_movies" />
+
+    <fragment
+        android:id="@+id/seriesFragment"
+        android:name="com.tech.simplemovieapp.feature.series.SeriesFragment"
+        android:label="Series"
+        tools:layout="@layout/fragment_series" />
+
 </navigation>

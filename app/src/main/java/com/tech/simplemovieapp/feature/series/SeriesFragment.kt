@@ -1,4 +1,4 @@
-package com.tech.simplemovieapp.feature.landing
+package com.tech.simplemovieapp.feature.series
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,16 +8,17 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.tech.simplemovieapp.databinding.FragmentLandingBinding
+import com.tech.simplemovieapp.databinding.FragmentSeriesBinding
+import com.tech.simplemovieapp.feature.landing.FilmAdapter
 import com.tech.simplemovieapp.util.Resource
 import com.tech.simplemovieapp.util.autoCleared
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class LandingFragment : Fragment() {
+class SeriesFragment : Fragment() {
 
-    private var binding: FragmentLandingBinding by autoCleared()
-    private val viewModel: LandingViewModel by viewModels()
+    private var binding: FragmentSeriesBinding by autoCleared()
+    private val viewModel: SeriesViewModel by viewModels()
     private lateinit var adapter: FilmAdapter
 
     override fun onCreateView(
@@ -25,7 +26,7 @@ class LandingFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FragmentLandingBinding.inflate(inflater, container, false)
+        binding = FragmentSeriesBinding.inflate(inflater, container, false)
         return binding.root
     }
 
@@ -37,7 +38,7 @@ class LandingFragment : Fragment() {
 
 
     private fun setupObserver() {
-        viewModel.films.observe(viewLifecycleOwner, {
+        viewModel.series.observe(viewLifecycleOwner, {
             when (it.status) {
                 Resource.Status.SUCCESS -> {
                     binding.progressBar.visibility = View.GONE
@@ -55,8 +56,9 @@ class LandingFragment : Fragment() {
 
     private fun setupRecyclerView() {
         adapter = FilmAdapter()
-        binding.rvCatalogue.layoutManager = LinearLayoutManager(requireContext())
-        binding.rvCatalogue.adapter = adapter
+        binding.rvSeries.layoutManager = LinearLayoutManager(requireContext())
+        binding.rvSeries.adapter = adapter
     }
+
 
 }

@@ -16,4 +16,16 @@ class FilmRepository @Inject constructor(
         saveCallResult = { localDataSource.insertAll(it.results) }
     )
 
+    fun getMovies() = performGetOperation(
+        databaseQuery = { localDataSource.getAllMovies() },
+        networkCall = { remoteDataSource.getFilms() },
+        saveCallResult = { localDataSource.insertAll(it.results) }
+    )
+
+    fun getSeries() = performGetOperation(
+        databaseQuery = { localDataSource.getAllSeries() },
+        networkCall = { remoteDataSource.getFilms() },
+        saveCallResult = { localDataSource.insertAll(it.results) }
+    )
+
 }

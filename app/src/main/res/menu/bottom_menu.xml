@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/landing_option"
+        android:id="@+id/landingFragment"
         android:icon="@drawable/ic_baseline_dashboard_24"
         android:title="@string/landing_footer_menu" />
 
     <item
-        android:id="@+id/movies_option"
+        android:id="@+id/moviesFragment"
         android:icon="@drawable/ic_baseline_local_movies_24"
         android:title="@string/movies_footer_menu" />
 
     <item
-        android:id="@+id/series_option"
+        android:id="@+id/seriesFragment"
         android:icon="@drawable/ic_baseline_tv_24"
         android:title="@string/series_footer_menu" />
 </menu>
