@@ -136,10 +136,6 @@ dependencies {
     def coroutinesVersion = "1.5.0"
     def truthVersion = "1.1.2"
 
-    //mockito
-    testImplementation "io.mockk:mockk:1.10.0"
-    androidTestImplementation "io.mockk:mockk:1.10.0"
-
     testImplementation "junit:junit:4.13.2"
     testImplementation "org.hamcrest:hamcrest-all:$hamcrestVersion"
     testImplementation "androidx.arch.core:core-testing:$archTestingVersion"
@@ -147,4 +143,8 @@ dependencies {
     testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:$coroutinesVersion"
     testImplementation "com.google.truth:truth:$truthVersion"
     testImplementation('com.jraska.livedata:testing-ktx:1.2.0')
+
+    //mockito
+    testImplementation "io.mockk:mockk:1.10.0"
+    androidTestImplementation "io.mockk:mockk:1.10.0"
 }
