@@ -44,7 +44,6 @@ class LandingFragment : Fragment() {
         setupObserver()
     }
 
-
     private fun setupObserver() {
         viewModel.start()
         viewModel.films.observe(viewLifecycleOwner, {

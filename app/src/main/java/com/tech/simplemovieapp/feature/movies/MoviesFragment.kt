@@ -45,7 +45,6 @@ class MoviesFragment : Fragment() {
         setupObserver()
     }
 
-
     private fun setupObserver() {
         viewModel.start()
         viewModel.movies.observe(viewLifecycleOwner, {

@@ -36,7 +36,6 @@ class SeriesFragment : Fragment() {
         setupObserver()
     }
 
-
     private fun setupObserver() {
         viewModel.start()
         viewModel.series.observe(viewLifecycleOwner, {
