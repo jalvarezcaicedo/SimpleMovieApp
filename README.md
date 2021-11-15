@@ -1,6 +1,8 @@
-						                    → DataSource
-activity/fragment → viewModel → repository
-                                            → Model
+						                    
+								    
+					<-> DataSource
+activity/fragment <-> viewModel <-> repository
+                                        <-> Model
 
 
 
