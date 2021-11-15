@@ -1,9 +1,8 @@
 						                    
-								    
-					<-> DataSource
-activity/fragment <-> viewModel <-> repository
-                                        <-> Model
-
+README
+								
+activity/fragment <-> viewModel <-> repository <-> DataSource | Model
+                                        	
 
 
 data
